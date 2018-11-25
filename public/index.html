@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name='viewport' content='width = device-width, inicial-scale=1'> <!-- mobile competabillity -->
+  <title>Indecision App</title>
+  <link rel='icon' type='image/png' href='/images/favicon.png'/>
+</head>
+
+<body>
+  <div id="app"></div>
+    <script src="/bundle.js"></script>
+</body>
+
+</html>
+
+<!--all installations running the server lesson 7-9
+  after installing live-server
+  write live-server and the folder name
+  "file-server public"
+
+  install babel
+
+  if we have no node modules folder -> run yarn install on cmd
+
+  installing depandencies sectin6 lesson 49
+    in folder : yarn add live-server babel-cli@6.24.1
+    add 2 scripts in package.json:
+          "scripts":{
+            "serve":"live-server public/",
+            "build-babel":"babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch"
+          },
+
+    now installin webpack:
+          cli -> yarn add webpack@3.1.0 making the node  modules avilable via scripts
+          addin to scripts -> "build" : "webpack
+          create new configure file on the root named webpack.config.js
+
+    installing npm validator - yarn add ${module name} -> will install it locally  for the project, show on the package json
+          import view the module documentation to see which functions would you like to import ad if they are defaults or named
+    installing react and react-dom modules - yarn add react@16.0.0 react-dom@16.0.0
+      install will not include it on the bundles importing is neccery
+
+    how yo use a loader: web pack  - will convert es5-to es6 jsx to js
+          install bable-core and babel-loader -> yarn add babel-core@6.25.0 babel-loader@7.1.1
+          loader setup :
+            on the webapack.config add modules (rules)
+            create a new file on the root namded ".babelrc" will ask the broweser to transltae
+
+    Cool Make your life easier webpack configurations:
+          1. source map - add on webpack config - "devtool: cheap-module-eval-source-map"
+              you can choose from list of sopurce map on webpack.js configuration documentarion.
+              the source map will provide us with the correct error line of our file and not a link to the bundle file
+          2. webpack devserver - explore options on webpack configuration dev server documentaion!
+              install on the terminall yarn add webpack-dev-server@2.5.1
+              on webpack config.js  set up th devServer object
+              package.json:
+                  remove the babel script
+                  change the build script to webpack only
+
+                  //  FROM NOW WE RUN THE SERVER VIA "yarn run dev-server"
+    
+    Installing babel new features (presets): 
+          1. transform plugin will simplify the class structure 
+            yarn add babel-plugin-transform-class-properties@6.24.1
+            configure the babel plugin installtin on babelrc
+          
+    Installing react Modal:
+      1. gp to react git-hub repo -> documentation  and usage
+      2. see what props expect and use
+      3. yarn add react-modal@2.2.2
+
+    !! - true boolean : 
+          will convert undefiend to be false and normal strings to be true
+
+    configure webPack to work with style files preprocessor (SCSS):
+          1. write a new rule as a new object in the rules array on webpack.config.js
+          2. install the css-loader abd the style-loader package
+          3. yarn add style-loader@0.18.2 css-loader@0.28.4
+          4. add the 2 loaders in a 'use' array
+
+    using SASS:
+          1. install 2 new packages:
+          2. yarn add sass-loader@6.0.6 node-sass@4.5.3
+          3. changed the test case from /.css to ./scss
+          4. add the sass loader to our use array
+
+    Instaslling Normalize package for browser competabillity
+          1. yarn add normalize.css@7.0.0
+          2. import the reset above all styles files
+
+ -->
+ <!-- 
+   yarv run dev-server 
+   yarn build
+  -->
